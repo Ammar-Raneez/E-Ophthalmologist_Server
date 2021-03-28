@@ -24,7 +24,7 @@ def upload(image_path):
     # Make prediction
     prediction = model_predict(image_path, model)
     # These are the prediction categories 
-    CATEGORIES = ['No Diabetic Retinopathy was detected', 'A Mild Condition was detected', 'A Moderate Condition was detected', 'A Severe Condition was detected', 'A Proliferative Condition was detected']
+    CATEGORIES = ['No Diabetic Retinopathy', 'Mild', 'Moderate', 'Severe', 'Proliferative']
     
     # getting the prediction result from the categories
     result = CATEGORIES[int(round(prediction[0]))]
